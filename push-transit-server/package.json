@@ -1,0 +1,44 @@
+{
+  "name": "c-api",
+  "version": "1.0.0",
+  "main": "app.js",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "watch": "nodemon --exec npm run start",
+    "build": "echo 'build success'",
+    "test": "./node_modules/mocha/bin/mocha -t 20000",
+    "lint": "./node_modules/eslint/bin/eslint.js amqp.js server.js client.js",
+    "test-jenkins": "JUNIT_REPORT_PATH=reports/report.xml mocha --colors --reporter mocha-jenkins-reporter"
+  },
+  "dependencies": {
+    "amqplib": "^0.5.2",
+    "async": "^2.6.0",
+    "cloud-config-client": "^1.0.0",
+    "jpush-sdk": "^3.4.3",
+    "koa": "^2.4.1",
+    "koa-bodyparser": "^4.2.0",
+    "koa-compress": "^2.0.0",
+    "koa-router": "^7.3.0",
+    "koa-validate": "^1.0.7",
+    "moment": "^2.19.4",
+    "monk": "^6.0.5",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "underscore": "^1.8.3",
+    "when": "^3.7.8"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "errorhandler": "^1.2.0",
+    "eslint": "^4.12.1",
+    "mocha": "^4.0.1",
+    "mocha-jenkins-reporter": "^0.3.10",
+    "nodemon": "^1.12.1",
+    "should": "*",
+    "supertest": "*"
+  },
+  "engines": {
+    "node": ">=8.5.0"
+  }
+}
